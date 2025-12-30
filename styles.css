@@ -36,7 +36,7 @@ header {
     width: 100%;
     position: relative;
     padding-bottom: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .coverphotobox {
@@ -77,7 +77,6 @@ header {
     font-size: 1.6rem;
     font-family: "Valorant";
     font-weight: normal;
-    padding-right: 1rem;
 }
 
 .social-icons {
