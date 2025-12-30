@@ -1,0 +1,391 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    line-height: 1.5;
+    padding: 2rem;
+    background: radial-gradient(circle, #b31217 0%, #3d0000 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    gap: 2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.coverphotobox {
+    position: relative;
+}
+
+.coverphoto {
+    width: 100%;
+    object-fit: cover;
+    border: solid .5rem #FFBF00;
+    border-radius: 2rem;
+}
+
+.profilepicbox {
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: 10%;
+    left: 2rem;
+    max-width: 40%;
+    border: 5px solid #FFBF00;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profilepic {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    color: #FFBF00;
+    font-size: 1.6rem;
+    font-family: "Valorant";
+    font-weight: normal;
+    padding-right: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.social-icons a {
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FFBF00;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #FFBF00;
+    position: sticky;
+    top: 2rem;
+    z-index: 1000;
+    border-radius: 5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.Logo {
+    max-width: 5rem;
+}
+
+.btngroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0;
+}
+
+nav ul li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 .5rem 0;
+    justify-items: center;
+}
+
+nav ul li a {
+    color: #b31217;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+
+
+home {
+    display: flex;
+    margin-bottom: 5rem;
+    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    border-radius: 2rem;
+    border: solid .1rem #4a0707;
+}
+
+.slider {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.imagebox {
+    display: flex;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.imagebox img {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in;
+    border-radius: 25%;
+}
+
+.imagebox input {
+    display: none;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+.dots label {
+    height: 2rem;
+    width: 2rem;
+    border: solid .2rem #FFBF00;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: .5rem;
+}
+
+.dots label:hover {
+    background-color: white;
+}
+
+#img1:checked~.m1 {
+    margin-left: 0;
+}
+
+#img2:checked~.m2 {
+    margin-left: -100%;
+}
+
+#img3:checked~.m3 {
+    margin-left: -200%;
+}
+
+#img4:checked~.m4 {
+    margin-left: -300%;
+}
+
+#img1:checked~.m1,
+#img2:checked~.m2,
+#img3:checked~.m3,
+#img4:checked~.m4 {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+    border: 0.4rem solid #FFBF00;
+}
+
+.biobox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    font-size: 1.6rem;
+    justify-items: center;
+    color: #FFBF00;
+    text-align: right;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    border-radius: 2rem;
+    border: solid .1rem #4a0707;
+    padding: 2rem;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .2rem;
+    color: #FFBF00;
+    font-size: 1.6rem;
+}
+
+.schools {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.education a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #FFBF00;
+}
+
+.education a:hover {
+    color: white;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .2rem;
+    color: #FFBF00;
+    font-size: 1.6rem;
+}
+
+.interestgroup {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.interest p {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #FFBF00;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .2rem;
+    color: #FFBF00;
+    font-size: 1.6rem;
+}
+
+.hobbiesgroup {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.valo {
+    font-family: "Valorant";
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'VALORANT';
+    src: url('../font/VALORANT-Regular.woff2') format('woff2'),
+        url('../font/VALORANT-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    border-radius: 2rem;
+    border: solid .1rem #4a0707;
+    padding: 2rem;
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: .5rem;
+    margin: 1rem;
+    color: #b31217;
+    font-size: 1.6rem;
+    background-color: #FFBF00;
+    border-radius: 1rem;
+    height: 30rem;
+}
+
+.techstack {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.softskill {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: .5rem;
+    margin: 1rem;
+    color: #b31217;
+    font-size: 1.6rem;
+    background-color: #FFBF00;
+    border-radius: 1rem;
+    height: 30rem;
+}
+
+.attributes {
+    display: flex;
+    flex-direction: column;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: .5rem;
+    margin: 1rem;
+    color: #b31217;
+    font-size: 1.6rem;
+    background-color: #FFBF00;
+    border-radius: 1rem;
+    height: 30rem;
+}
+
+.toolgroup {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.divider {
+    border: solid .1rem #3d0000;
+}
