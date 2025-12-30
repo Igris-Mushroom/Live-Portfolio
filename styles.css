@@ -52,8 +52,8 @@ header {
 }
 
 .profilepicbox {
-    width: 13rem;
-    height: 13rem;
+    width: 15rem;
+    height: 15rem;
     position: absolute;
     bottom: -5%;
     left: 1rem;
@@ -325,8 +325,8 @@ nav ul li a {
 
 @font-face {
     font-family: 'VALORANT';
-    src: url('../font/VALORANT-Regular.woff2') format('woff2'),
-        url('../font/VALORANT-Regular.woff') format('woff');
+    src: url('font/VALORANT-Regular.woff2') format('woff2'),
+        url('font/VALORANT-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
