@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav");
     const sections = document.querySelectorAll('.home, .about, .skill, .projects, .contact');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
     let lastScrollY = window.scrollY;
 
     // --- 1. Adlaw og Gabie (Theme) Mode ---
@@ -30,26 +32,55 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScrollY = currentScrollY;
     });
 
+    function applyRise(target) {
+        sections.forEach(s => s.classList.remove('element-rise'));
+        if (target) target.classList.add('element-rise');
+    }
+
     sections.forEach(section => {
-        section.addEventListener('click', function () {
-            sections.forEach(s => s.classList.remove('element-rise'));
-            this.classList.add('element-rise');
-        });
+        section.addEventListener('click', () => applyRise(section));
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', function () {
             const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            sections.forEach(s => s.classList.remove('element-rise'));
-            if (targetSection) {
-                targetSection.classList.add('element-rise');
-            }
-
+            applyRise(document.getElementById(targetId));
             nav.classList.remove("nav-hidden");
         });
     });
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            submitBtn.innerText = "SENDING...";
+            submitBtn.disabled = true;
+
+            const now = new Date();
+            const formattedTime = now.toLocaleString();
+            document.getElementById('form-time').value = formattedTime;
+
+            const serviceID = 'service_7n5k6ng';
+            const templateID = 'template_hi9vggt';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    submitBtn.innerText = "SENT!";
+                    alert("Salamat! Your message has been sent.");
+                    contactForm.reset();
+                })
+                .catch((err) => {
+                    submitBtn.innerText = "FAILED";
+                    alert("Error: " + JSON.stringify(err));
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        submitBtn.innerText = "Send Message";
+                        submitBtn.disabled = false;
+                    }, 3000);
+                });
+        });
+    }
 
     if (localStorage.getItem("theme") === "light") {
         document.body.classList.add("lightmode");
