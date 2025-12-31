@@ -1,5 +1,8 @@
 body {
     padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -11,6 +14,10 @@ header {
     width: 40rem;
     height: 40rem;
     left: 4rem;
+}
+
+.nav {
+    gap: 2rem;
 }
 
 .name {
@@ -32,6 +39,7 @@ nav ul li a {
 
 .home {
     scroll-margin-top: 10vh;
+    width: 60%;
 }
 
 .quote {
@@ -40,11 +48,12 @@ nav ul li a {
 
 .about {
     font-size: 2.4rem;
+    width: 60%;
+    scroll-margin-top: 10vh;
+
+
 }
 
-.about {
-    scroll-margin-top: 10vh;
-}
 
 .education {
     font-size: 2.4rem;
@@ -62,7 +71,7 @@ nav ul li a {
 .skill {
     font-size: 2.4;
     scroll-margin-top: 10vh;
-
+    width: 60%;
 }
 
 .titlebox {
@@ -97,21 +106,23 @@ nav ul li a {
 
 .projects {
     font-size: 2.4rem;
+    width: 60%;
 }
 
 .contact {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     scroll-margin-top: 10vh;
+    width: 60%;
 }
 
 
 .contact input,
 button {
     height: 4rem;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
 }
 
 .contact textarea {
     height: 8rem;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
 }

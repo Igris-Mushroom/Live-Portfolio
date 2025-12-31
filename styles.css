@@ -3,6 +3,25 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --base-color1: #b31217;
+    --base-color2: #3d0000;
+    --textcolor: #FFBF00;
+    --textcontrast: #b31217;
+    --titlecolor: white;
+    --bordercolor: #FFBF00;
+}
+
+.lightmode {
+    --base-color1: #f4f4f4;
+    --base-color2: #b98e8e;
+    --textcolor: #ff4655;
+    --textcontrast: #0F1923;
+    --titlecolor: #ff4655;
+    --bordercolor: #ff4655;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,18 +34,19 @@ body {
     width: 100%;
     line-height: 1.5;
     padding: 2rem;
-    background: radial-gradient(circle, #b31217 0%, #3d0000 100%);
+    background: radial-gradient(circle, var(--base-color1) 0%, var(--base-color2) 100%);
+    transition: background 0.8s ease-in-out, color 0.8s ease-in-out;
     background-attachment: fixed;
     overflow-x: hidden;
     gap: 2rem;
 }
 
 h1 {
-    color: white;
+    color: var(--titlecolor);
 }
 
 h3 {
-    color: #FFBF00;
+    color: var(--textcolor);
 }
 
 
@@ -47,7 +67,7 @@ header {
 .coverphoto {
     width: 100%;
     object-fit: cover;
-    border: solid .5rem #FFBF00;
+    border: solid .5rem var(--bordercolor);
     border-radius: 2rem;
 }
 
@@ -58,7 +78,7 @@ header {
     bottom: -5%;
     left: 1rem;
     max-width: 40%;
-    border: 5px solid #FFBF00;
+    border: 5px solid var(--bordercolor);
     border-radius: 50%;
     overflow: hidden;
 }
@@ -73,7 +93,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    color: #FFBF00;
+    color: var(--textcolor);
     font-size: 1.4rem;
     font-family: "Valorant";
     font-weight: normal;
@@ -90,13 +110,13 @@ header {
 
 .social-icons a {
     font-size: 3rem;
-    color: white;
+    color: var(--titlecolor);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #FFBF00;
+    color: var(--textcolor);
 }
 
 
@@ -104,23 +124,49 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: #FFBF00;
+    background-color: var(--bordercolor);
     position: sticky;
     top: 2rem;
     z-index: 1000;
     border-radius: 5rem;
     margin-bottom: 2rem;
     justify-content: center;
+    padding: 1rem;
 }
 
-.Logo {
-    max-width: 5rem;
-}
-
-.btngroup {
+.colorswitch {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+}
+
+#themeicon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    /* 0.6s duration with a 'back-and-forth' spring effect */
+    transition:
+        transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+        color 0.4s ease,
+        filter 0.4s ease;
+    filter: drop-shadow(0 0 5px var(--accent));
+    display: inline-block;
+    /* Required for transform to work perfectly */
+}
+
+/* The state when in Light Mode */
+.inverted {
+    transform: rotate(180deg) scale(1.2);
+    /* Rotates AND grows slightly */
+    filter: drop-shadow(0 0 15px var(--accent));
+    /* Stronger glow in light mode */
+}
+
+/* Hover effect for extra polish */
+.colorswitch:hover .themeicon {
+    filter: drop-shadow(0 0 10px var(--accent));
+    transform: scale(1.1);
 }
 
 
@@ -141,7 +187,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #b31217;
+    color: var(--textcontrast);
     font-weight: bold;
     text-decoration: none;
     font-size: 1.6rem;
@@ -152,9 +198,9 @@ nav ul li a {
 .home {
     display: flex;
     margin-bottom: 5rem;
-    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    box-shadow: 2rem 2rem 3.5rem var(--base-color2);
     border-radius: 2rem;
-    border: solid .1rem #4a0707;
+    border: solid .1rem var(--base-color2);
     scroll-margin-top: 30vh;
 }
 
@@ -191,7 +237,7 @@ nav ul li a {
 .dots label {
     height: 2rem;
     width: 2rem;
-    border: solid .2rem #FFBF00;
+    border: solid .2rem var(--bordercolor);
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.15s ease;
@@ -199,7 +245,7 @@ nav ul li a {
 }
 
 .dots label:hover {
-    background-color: white;
+    background-color: var(--titlecolor);
 }
 
 #img1:checked~.m1 {
@@ -225,7 +271,7 @@ nav ul li a {
     filter: blur(0);
     transform: scale(1);
     opacity: 1;
-    border: 0.4rem solid #FFBF00;
+    border: 0.4rem solid var(--bordercolor);
 }
 
 .biobox {
@@ -240,7 +286,7 @@ nav ul li a {
 .quote {
     font-size: 1.6rem;
     justify-items: center;
-    color: #FFBF00;
+    color: var(--textcolor);
     text-align: right;
 }
 
@@ -250,9 +296,9 @@ nav ul li a {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 5rem;
-    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    box-shadow: 2rem 2rem 3.5rem var(--base-color2);
     border-radius: 2rem;
-    border: solid .1rem #4a0707;
+    border: solid .1rem var(--base-color2);
     padding: 2rem;
     scroll-margin-top: 15vh;
     font-size: 1.6rem;
@@ -269,7 +315,7 @@ nav ul li a {
     flex-direction: column;
     width: 100%;
     padding: .2rem;
-    color: #FFBF00;
+    color: var(--textcolor);
     font-size: 1.6rem;
 }
 
@@ -282,11 +328,11 @@ nav ul li a {
 .education a {
     text-decoration: none;
     transition: color 0.3s;
-    color: #FFBF00;
+    color: var(--textcolor);
 }
 
 .education a:hover {
-    color: white;
+    color: var(--titlecolor);
 }
 
 .interest {
@@ -294,7 +340,7 @@ nav ul li a {
     flex-direction: column;
     width: 100%;
     padding: .2rem;
-    color: #FFBF00;
+    color: var(--textcolor);
     font-size: 1.6rem;
 }
 
@@ -307,7 +353,7 @@ nav ul li a {
 .interest p {
     text-decoration: none;
     transition: color 0.3s;
-    color: #FFBF00;
+    color: var(--textcolor);
 }
 
 .hobbies {
@@ -315,7 +361,7 @@ nav ul li a {
     flex-direction: column;
     width: 100%;
     padding: .2rem;
-    color: #FFBF00;
+    color: var(--textcolor);
     font-size: 1.6rem;
 }
 
@@ -345,16 +391,16 @@ nav ul li a {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 5rem;
-    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    box-shadow: 2rem 2rem 3.5rem var(--base-color2);
     border-radius: 2rem;
-    border: solid .1rem #4a0707;
+    border: solid .1rem var(--base-color2);
     padding: 2rem;
     scroll-margin-top: 15vh;
     font-size: 1.6rem;
 }
 
 .skill h3 {
-    color: #b31217;
+    color: var(--base-color1);
 }
 
 .skillcon {
@@ -369,8 +415,8 @@ nav ul li a {
     width: 40%;
     padding: .5rem;
     margin: 1rem;
-    color: #b31217;
-    background-color: #FFBF00;
+    color: var(--base-color1);
+    background-color: var(--bordercolor);
     border-radius: 1rem;
     height: 30rem;
 }
@@ -387,8 +433,8 @@ nav ul li a {
     width: 40%;
     padding: .5rem;
     margin: 1rem;
-    color: #b31217;
-    background-color: #FFBF00;
+    color: var(--base-color1);
+    background-color: var(--bordercolor);
     border-radius: 1rem;
     height: 30rem;
 }
@@ -404,9 +450,9 @@ nav ul li a {
     width: 40%;
     padding: .5rem;
     margin: 1rem;
-    color: #b31217;
+    color: var(--base-color1);
     font-size: 1.6rem;
-    background-color: #FFBF00;
+    background-color: var(--bordercolor);
     border-radius: 1rem;
     height: 30rem;
 }
@@ -418,7 +464,7 @@ nav ul li a {
 }
 
 .divider {
-    border: solid .1rem #3d0000;
+    border: solid .1rem var(--base-color2);
 }
 
 .projects {
@@ -426,9 +472,9 @@ nav ul li a {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    box-shadow: 2rem 2rem 3.5rem var(--base-color2);
     border-radius: 2rem;
-    border: solid .1rem #4a0707;
+    border: solid .1rem var(--base-color2);
     padding: 2rem;
     font-size: 1.6rem;
     scroll-margin-top: 10vh;
@@ -436,7 +482,7 @@ nav ul li a {
 
 .image1 {
     width: 100%;
-    color: white;
+    color: var(--titlecolor);
 }
 
 .proj1img {
@@ -446,16 +492,16 @@ nav ul li a {
 .image1 a {
     border-radius: 10%;
     padding: .5rem;
-    color: #b31217;
+    color: var(--base-color1);
     font-weight: bold;
     text-decoration: none;
     font-size: 1.6rem;
-    background-color: white;
+    background-color: var(--titlecolor);
 }
 
 .image2 {
     width: 100%;
-    color: white;
+    color: var(--titlecolor);
     padding-top: 10%;
 }
 
@@ -467,9 +513,9 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2rem 2rem 3.5rem #3d0000;
+    box-shadow: 2rem 2rem 3.5rem var(--base-color2);
     border-radius: 2rem;
-    border: solid .1rem #4a0707;
+    border: solid .1rem var(--base-color2);
     padding: 2rem;
     font-size: 1.6rem;
     scroll-margin-top: 10vh;
@@ -497,13 +543,13 @@ section form {
 }
 
 section label {
-    color: white;
+    color: var(--titlecolor);
 }
 
 section button {
     border-radius: 2rem;
-    background-color: #FFBF00;
-    color: #4a0707;
+    background-color: var(--bordercolor);
+    color: var(--base-color2);
     font-family: "Valorant";
     font-weight: normal;
 }
