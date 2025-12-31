@@ -409,7 +409,7 @@ nav ul li a {
     border-radius: 2rem;
     border: solid .1rem var(--base-color2);
     padding: 2rem;
-    scroll-margin-top: 15vh;
+    scroll-margin-top: 1vh;
     font-size: 1.6rem;
 }
 
@@ -496,9 +496,8 @@ nav ul li a {
     border: solid .1rem var(--base-color2);
     padding: 2rem;
     font-size: 1.6rem;
-    scroll-margin-top: 10vh;
+    scroll-margin-top: 1vh;
     margin-bottom: 5rem;
-
 }
 
 .image1 {
@@ -579,8 +578,7 @@ section button {
     justify-content: center;
 }
 
-/*Animationn Magic-Magic
-/* The base state for all sections */
+/*Animationn Magic-Magic*/
 .home,
 .about,
 .skill,
@@ -590,14 +588,10 @@ section button {
         box-shadow 0.4s ease,
         background-color 0.8s ease;
     cursor: pointer;
-    /* Feedback to show it's clickable */
 }
 
-/* The "Rise" effect */
 .element-rise {
     transform: translateY(-20px) scale(1.02);
-    /* Moves up and grows slightly */
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4) !important;
     z-index: 10;
-    /* Ensures it stays on top of other elements */
 }

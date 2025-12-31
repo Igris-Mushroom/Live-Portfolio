@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("theme", mode);
     });
 
-    // --- 2. Retractable Navbar ---
     window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScrollY = currentScrollY;
     });
 
-    // --- 3. Rise on Click ---
     sections.forEach(section => {
         section.addEventListener('click', function () {
             sections.forEach(s => s.classList.remove('element-rise'));
@@ -39,24 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- 4. Rise on Navbar Navigation ---
     navLinks.forEach(link => {
         link.addEventListener('click', function () {
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
-            // Remove rise from all, add to target
             sections.forEach(s => s.classList.remove('element-rise'));
             if (targetSection) {
                 targetSection.classList.add('element-rise');
             }
 
-            // Keep nav visible during jump
             nav.classList.remove("nav-hidden");
         });
     });
 
-    // --- 5. Load Saved Theme ---
     if (localStorage.getItem("theme") === "light") {
         document.body.classList.add("lightmode");
         icon.classList.add("inverted");

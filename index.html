@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div class="tools">
-                <h3>Tools</h3>
+                <h3>Tools and<br> Environment</h3>
                 <hr class="divider">
                 <div class="toolgroup">
                     <ul>
@@ -213,8 +213,7 @@
         </div>
         <section id="contactbox">
 
-            <form action="/submit-form" method="POST">
-                <label for="name">Name:</label>
+            <form id="contact-form"> <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
@@ -223,7 +222,9 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <input type="hidden" name="time" id="form-time">
+
+                <button type="submit" id="submit-btn">Send Message</button>
             </form>
         </section>
         <div class="social-icons">
