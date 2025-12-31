@@ -1,0 +1,117 @@
+body {
+    padding: 5rem;
+}
+
+header {
+    padding-bottom: 3rem;
+    margin-bottom: 10rem;
+}
+
+.profilepicbox {
+    width: 40rem;
+    height: 40rem;
+    left: 4rem;
+}
+
+.name {
+    font-size: 2.4rem;
+}
+
+.social-icons a {
+    font-size: 4rem;
+}
+
+nav ul {
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-size: 2.4rem;
+}
+
+
+.home {
+    scroll-margin-top: 10vh;
+}
+
+.quote {
+    font-size: 2.4rem;
+}
+
+.about {
+    font-size: 2.4rem;
+}
+
+.about {
+    scroll-margin-top: 10vh;
+}
+
+.education {
+    font-size: 2.4rem;
+}
+
+.interest {
+    font-size: 2.4rem;
+}
+
+.hobbies {
+    font-size: 2.4rem;
+}
+
+
+.skill {
+    font-size: 2.4;
+    scroll-margin-top: 10vh;
+
+}
+
+.titlebox {
+    font-size: 2.4rem;
+}
+
+.skill h1 {
+    justify-content: center;
+}
+
+.skillcon {
+    font-size: 2.4rem;
+}
+
+.language {
+    height: 40rem;
+    width: 30%;
+}
+
+.softskill {
+    height: 40rem;
+    width: 30%;
+
+}
+
+.tools {
+    width: 30%;
+    font-size: 2.4rem;
+    height: 40rem;
+}
+
+
+.projects {
+    font-size: 2.4rem;
+}
+
+.contact {
+    font-size: 3.2rem;
+    scroll-margin-top: 10vh;
+}
+
+
+.contact input,
+button {
+    height: 4rem;
+    font-size: 3.2rem;
+}
+
+.contact textarea {
+    height: 8rem;
+    font-size: 3.2rem;
+}
