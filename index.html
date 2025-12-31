@@ -89,7 +89,9 @@
     </home>
 
     <about class="about" id="about">
-        <h1>About</h1>
+        <div class="titlebox">
+            <h1>About</h1>
+        </div>
         <div class="skillcon">
             <div class="education">
                 <h3>Education</h3>
@@ -124,8 +126,9 @@
     </about>
 
     <skill class="skill" id="skill">
-        <h1>Skills</h1>
-
+        <div class="titlebox">
+            <h1>Skills</h1>
+        </div>
         <div class="skillcon">
             <div class="language">
                 <h3>Technical <br> Stack</h3>
@@ -195,9 +198,11 @@
         </div>
     </projects>
 
-    <contact class="contact">
-        <section id="contactbox">
+    <div class="contact" id="contact">
+        <div class="titlebox">
             <h1>Contact Me</h1>
+        </div>
+        <section id="contactbox">
 
             <form action="/submit-form" method="POST">
                 <label for="name">Name:</label>
@@ -212,7 +217,17 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
-    </contact>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/a.xyroncabillo" target="_self" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mushroom_soup_s24/" target="_self" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/Igris-Mushroom" target="_self" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
 </body>
 
 </html>

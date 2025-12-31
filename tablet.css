@@ -1,10 +1,10 @@
-/*
 body {
     padding: 10rem;
 }
 
 header {
-    padding: 5rem;
+    padding-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 
 .coverphotobox {
@@ -16,4 +16,98 @@ header {
 .profilepicbox {
     width: 25rem;
     height: 25rem;
+    left: 8rem;
+}
+
+.name {
+    font-size: 3.2rem;
+}
+
+.social-icons a {
+    font-size: 6rem;
+}
+
+.nav {
+    justify-content: center;
+}
+
+nav ul {
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-size: 3.2rem;
+}
+
+.quote {
+    font-size: 3.2rem;
+}
+
+.about {
+    font-size: 3.2rem;
+}
+
+.about h1 {
+    justify-content: center;
+}
+
+.education {
+    font-size: 3.2rem;
+}
+
+.interest {
+    font-size: 3.2rem;
+}
+
+.hobbies {
+    font-size: 3.2rem;
+}
+
+.skill {
+    font-size: 3.2;
+}
+
+.titlebox {
+    font-size: 3.2rem;
+}
+
+.skill h1 {
+    justify-content: center;
+}
+
+.skillcon {
+    font-size: 3.2rem;
+}
+
+.language {
+    height: 60rem;
+}
+
+.softskill {
+    height: 60rem;
+}
+
+.tools {
+    font-size: 3.2rem;
+    height: 60rem;
+}
+
+.projects {
+    font-size: 3.2rem;
+}
+
+.contact {
+    font-size: 3.2rem;
+}
+
+
+.contact input,
+button {
+    height: 4rem;
+    font-size: 3.2rem;
+}
+
+.contact textarea {
+    height: 8rem;
+    font-size: 3.2rem;
 }
