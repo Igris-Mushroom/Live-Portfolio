@@ -40,12 +40,17 @@ nav ul li a {
     font-size: 3.2rem;
 }
 
+.home {
+    margin-bottom: 15rem;
+}
+
 .quote {
     font-size: 3.2rem;
 }
 
 .about {
     font-size: 3.2rem;
+    margin-bottom: 15rem;
 }
 
 .about h1 {
@@ -66,6 +71,12 @@ nav ul li a {
 
 .skill {
     font-size: 3.2;
+    margin-bottom: 15rem;
+}
+
+.skill h3 {
+    color: var(--base-color1);
+    font-size: 3.2rem;
 }
 
 .titlebox {
@@ -95,10 +106,12 @@ nav ul li a {
 
 .projects {
     font-size: 3.2rem;
+    margin-bottom: 15rem;
 }
 
 .contact {
     font-size: 3.2rem;
+    margin-bottom: 15rem;
 }
 
 
